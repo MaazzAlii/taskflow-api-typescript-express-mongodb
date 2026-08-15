@@ -79,3 +79,22 @@ Identical routes and behavior to the original JS version — see the [original r
 2. Vercel → New Project → import the repo.
 3. Add environment variables: `MONGO_URI`, `JWT_SECRET`, `JWT_EXPIRES_IN`, `NODE_ENV=production`.
 4. Deploy.
+
+## Verification
+
+The TypeScript migration has been verified with strict mode type checking (`tsc --noEmit`) and build compilation (`tsc`).
+
+```bash
+$ npm run typecheck
+
+> taskflow-api-typescript@1.0.0 typecheck
+> tsc --noEmit
+
+$ npm run build
+
+> taskflow-api-typescript@1.0.0 build
+> tsc
+```
+
+![Typecheck and Build Verification Output](docs/screenshots/typecheck-and-build.png)
+
